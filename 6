@@ -1,0 +1,26 @@
+import random
+
+m = int(input('Введите M:'))
+A = [random.randint(0, 10) for _ in range (m)]
+B = [random.randint(0, 10) for _ in range (m)]
+
+c = []
+for i in range(m):
+    c.append(B[(m - 1) - i] + A[i])
+
+print('Содержание массива A: ')
+for i in range(m):
+    print(A[i], end=' ')
+print()
+
+print('Содержание массива B: ')
+for i in range(m):
+    print(B[i], end=' ')
+print()
+
+print('Содержание массива C: ')
+for i in range(m):
+    print(c[i], end=' ')
+print()
+
+print('Сумма элементов S:', sum(c))
